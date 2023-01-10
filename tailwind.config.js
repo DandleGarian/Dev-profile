@@ -13,6 +13,8 @@ module.exports = {
         'heading-text': '#f0faff',
         text: '#e7ebfd',
         accent: '#d4f7e0',
+        'accent-2': '#03abad',
+        'accent-3': '#006572',
       },
       spacing: {
         xs: '0.4rem',
@@ -37,6 +39,7 @@ module.exports = {
       },
       fontSize: {
         sm: ['0.8rem', '1.3'],
+        'sm+': ['1.2rem', '1.3'],
         base: ['1.6rem', '1.3'],
         lg: ['2.4rem', '1.3'],
         xl: ['3.2rem', '1.3'],
