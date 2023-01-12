@@ -60,6 +60,31 @@ module.exports = {
         xl: '1400px',
         '2xl': '1536px',
       },
+      keyframes: {
+        'slide-up-out': {
+          '0%': { transform: 'translateY(100%)' },
+          '50%': { transform: 'translateY(0%)' },
+          '100%': { transform: 'translateY(-100%)' },
+        },
+        'fade-in': {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
+        },
+        'slide-up': {
+          '0%': { transform: 'translateY(100%)' },
+          '100%': { transform: 'translateY(0%)' },
+        },
+        'slide-down': {
+          '0%': { transform: 'translateY(-150%)' },
+          '100%': { transform: 'translateY(0%)' },
+        },
+      },
+      animation: {
+        'slide-up-out': 'slide-up-out 2s ease-in-out',
+        'fade-in': 'fade-in 1s ease',
+        'slide-up': 'slide-up 1s ease, fade-in 1s ease',
+        'slide-down': 'slide-down 1s ease, fade-in 1s ease',
+      },
     },
   },
   plugins: [
