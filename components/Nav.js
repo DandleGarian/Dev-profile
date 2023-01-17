@@ -1,10 +1,26 @@
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import logoLight from '../public/assets/logo-light.png';
+import logoDark from '../public/assets/logo-dark.png';
+import { motion } from 'framer-motion';
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { useRouter } from 'next/router';
+
+const navVariants = {
+  initial: {
+    y: '-100%',
+  },
+  animate: {
+    y: '0%',
+    transition: {
+      delay: 2.4,
+      duration: 0.3,
+    },
+  },
+};
 
 const Nav = () => {
   const [nav, setNav] = useState(false);
@@ -43,22 +59,21 @@ const Nav = () => {
   }, []);
 
   return (
-    <div
+    <motion.div
       style={{ backgroundColor: `${navBg}` }}
       className={
         shadow
           ? 'fixed w-full h-20 shadow-xl z-[100]'
           : 'fixed w-full h-20 z-[100]'
       }
+      variants={navVariants}
+      initial='initial'
+      animate='animate'
+      viewport={{ once: true }}
     >
       <div className='flex justify-between items-center w-full h-full px-8 2xl:px-16'>
         <Link href='/'>
-          <Image
-            src='/../public/assets/nike.eps'
-            alt='/'
-            width='125'
-            height='50'
-          />
+          <Image src={logoLight} alt='logo' width='190' height='45' />
         </Link>
         <div>
           <ul style={{ color: `${linkColor}` }} className='hidden md:flex'>
@@ -88,9 +103,9 @@ const Nav = () => {
               </li>
             </Link>
           </ul>
-          <div onClick={handleNav} className='md:hidden cursor-pointer'>
-            <AiOutlineMenu size={25} />
-          </div>
+        </div>
+        <div onClick={handleNav} className='md:hidden cursor-pointer'>
+          <AiOutlineMenu size={25} />
         </div>
       </div>
       <div
@@ -110,12 +125,7 @@ const Nav = () => {
           <div>
             <div className='flex w-full items-center justify-between'>
               <Link href='/'>
-                <Image
-                  src='/..public/assets/nike.eps'
-                  alt='/'
-                  width='87'
-                  height='35'
-                />
+                <Image src={logoDark} alt='logo' width='190' height='45' />
               </Link>
               <div
                 onClick={handleNav}
@@ -195,7 +205,7 @@ const Nav = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

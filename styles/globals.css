@@ -10,7 +10,7 @@ html {
 
 @layer base {
   body {
-    @apply bg-background text-text tracking-wide text-base;
+    @apply bg-gradient-radial from-[#002e31] via-[#002631] to-background text-text tracking-wide text-base;
   }
 
   h1,
