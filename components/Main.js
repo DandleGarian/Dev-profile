@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import Link from 'next/link';
 
 const mainVariants = {
   initial: {
@@ -119,23 +120,39 @@ const Main = () => {
             animate='animate'
           >
             <p className='py-md max-w-[70%] mx-auto hidden md:block'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-              rerum modi dolores totam ad eius quas accusantium error rem
-              magnam, consequatur perspiciatis aliquam, reprehenderit quod?
+              I'm a web developer and Shopify developer specializing in
+              high-quality eCommerce stores. Currently, I'm busy elevating
+              Shopify themes to new heights and exploring backend technologies.
             </p>
             <div className='flex items-center justify-between max-w-[330px] m-auto py-md'>
-              <div className='rounded-full shadow-lg shadow-black p-md+ cursor-pointer hover:scale-110 ease-in duration-300'>
-                <FaLinkedinIn />
-              </div>
-              <div className='rounded-full shadow-lg shadow-black p-md+ cursor-pointer hover:scale-110 ease-in duration-300'>
-                <FaGithub />
-              </div>
-              <div className='rounded-full shadow-lg shadow-black p-md+ cursor-pointer hover:scale-110 ease-in duration-300'>
-                <AiOutlineMail />
-              </div>
-              <div className='rounded-full shadow-lg shadow-black p-md+ cursor-pointer hover:scale-110 ease-in duration-300'>
-                <BsFillPersonLinesFill />
-              </div>
+              <a
+                href='https://www.linkedin.com/in/daniel-dulgerian/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='rounded-full shadow-lg shadow-black p-md+ cursor-pointer hover:scale-110 ease-in duration-300'>
+                  <FaLinkedinIn />
+                </div>
+              </a>
+              <a
+                href='https://github.com/DandleGarian'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='rounded-full shadow-lg shadow-black p-md+ cursor-pointer hover:scale-110 ease-in duration-300'>
+                  <FaGithub />
+                </div>
+              </a>
+              <Link href='/#contact'>
+                <div className='rounded-full shadow-lg shadow-black p-md+ cursor-pointer hover:scale-110 ease-in duration-300'>
+                  <AiOutlineMail />
+                </div>
+              </Link>
+              <Link href='/resume'>
+                <div className='rounded-full shadow-lg shadow-black p-md+ cursor-pointer hover:scale-110 ease-in duration-300'>
+                  <BsFillPersonLinesFill />
+                </div>
+              </Link>
             </div>
           </motion.div>
         </div>

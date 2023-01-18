@@ -34,7 +34,12 @@ const Nav = () => {
   const router = useRouter();
 
   useEffect(() => {
-    if (router.asPath === '/rgb') {
+    if (
+      router.asPath === '/rgb' ||
+      router.asPath === '/ecomm' ||
+      router.asPath === '/movie' ||
+      router.asPath === '/shopify'
+    ) {
       setNavBg('transparent');
       setLinkColor('#ecf0f3');
     } else {
@@ -188,18 +193,26 @@ const Nav = () => {
                 Let's connect
               </p>
               <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
-                <div className='rounded-full shadow-lg p-sm+ cursor-pointer hover:scale-105 ease-in duration-300'>
-                  <FaLinkedinIn />
-                </div>
-                <div className='rounded-full shadow-lg p-sm+ cursor-pointer hover:scale-105 ease-in duration-300'>
-                  <FaGithub />
-                </div>
-                <div className='rounded-full shadow-lg p-sm+ cursor-pointer hover:scale-105 ease-in duration-300'>
-                  <AiOutlineMail />
-                </div>
-                <div className='rounded-full shadow-lg p-sm+ cursor-pointer hover:scale-105 ease-in duration-300'>
-                  <BsFillPersonLinesFill />
-                </div>
+                <a href='https://www.linkedin.com/in/daniel-dulgerian/'>
+                  <div className='rounded-full shadow-lg p-sm+ cursor-pointer hover:scale-105 ease-in duration-300'>
+                    <FaLinkedinIn />
+                  </div>
+                </a>
+                <a href='https://github.com/DandleGarian'>
+                  <div className='rounded-full shadow-lg p-sm+ cursor-pointer hover:scale-105 ease-in duration-300'>
+                    <FaGithub />
+                  </div>
+                </a>
+                <Link href='/#contact'>
+                  <div className='rounded-full shadow-lg p-sm+ cursor-pointer hover:scale-105 ease-in duration-300'>
+                    <AiOutlineMail />
+                  </div>
+                </Link>
+                <Link href='/resume'>
+                  <div className='rounded-full shadow-lg p-sm+ cursor-pointer hover:scale-105 ease-in duration-300'>
+                    <BsFillPersonLinesFill />
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
