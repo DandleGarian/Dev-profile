@@ -1,10 +1,26 @@
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import logoLight from '../public/assets/logo-light.png';
+import logoDark from '../public/assets/logo-dark.png';
+import { motion } from 'framer-motion';
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { useRouter } from 'next/router';
+
+const navVariants = {
+  initial: {
+    y: '-100%',
+  },
+  animate: {
+    y: '0%',
+    transition: {
+      delay: 2.4,
+      duration: 0.3,
+    },
+  },
+};
 
 const Nav = () => {
   const [nav, setNav] = useState(false);
@@ -18,7 +34,12 @@ const Nav = () => {
   const router = useRouter();
 
   useEffect(() => {
-    if (router.asPath === '/rgb') {
+    if (
+      router.asPath === '/rgb' ||
+      router.asPath === '/ecomm' ||
+      router.asPath === '/movie' ||
+      router.asPath === '/shopify'
+    ) {
       setNavBg('transparent');
       setLinkColor('#ecf0f3');
     } else {
@@ -43,22 +64,21 @@ const Nav = () => {
   }, []);
 
   return (
-    <div
+    <motion.div
       style={{ backgroundColor: `${navBg}` }}
       className={
         shadow
           ? 'fixed w-full h-20 shadow-xl z-[100]'
           : 'fixed w-full h-20 z-[100]'
       }
+      variants={navVariants}
+      initial='initial'
+      animate='animate'
+      viewport={{ once: true }}
     >
       <div className='flex justify-between items-center w-full h-full px-8 2xl:px-16'>
         <Link href='/'>
-          <Image
-            src='/../public/assets/nike.eps'
-            alt='/'
-            width='125'
-            height='50'
-          />
+          <Image src={logoLight} alt='logo' width='190' height='45' />
         </Link>
         <div>
           <ul style={{ color: `${linkColor}` }} className='hidden md:flex'>
@@ -88,9 +108,9 @@ const Nav = () => {
               </li>
             </Link>
           </ul>
-          <div onClick={handleNav} className='md:hidden cursor-pointer'>
-            <AiOutlineMenu size={25} />
-          </div>
+        </div>
+        <div onClick={handleNav} className='md:hidden cursor-pointer'>
+          <AiOutlineMenu size={25} />
         </div>
       </div>
       <div
@@ -110,12 +130,7 @@ const Nav = () => {
           <div>
             <div className='flex w-full items-center justify-between'>
               <Link href='/'>
-                <Image
-                  src='/..public/assets/nike.eps'
-                  alt='/'
-                  width='87'
-                  height='35'
-                />
+                <Image src={logoDark} alt='logo' width='190' height='45' />
               </Link>
               <div
                 onClick={handleNav}
@@ -178,24 +193,32 @@ const Nav = () => {
                 Let's connect
               </p>
               <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
-                <div className='rounded-full shadow-lg p-sm+ cursor-pointer hover:scale-105 ease-in duration-300'>
-                  <FaLinkedinIn />
-                </div>
-                <div className='rounded-full shadow-lg p-sm+ cursor-pointer hover:scale-105 ease-in duration-300'>
-                  <FaGithub />
-                </div>
-                <div className='rounded-full shadow-lg p-sm+ cursor-pointer hover:scale-105 ease-in duration-300'>
-                  <AiOutlineMail />
-                </div>
-                <div className='rounded-full shadow-lg p-sm+ cursor-pointer hover:scale-105 ease-in duration-300'>
-                  <BsFillPersonLinesFill />
-                </div>
+                <a href='https://www.linkedin.com/in/daniel-dulgerian/'>
+                  <div className='rounded-full shadow-lg p-sm+ cursor-pointer hover:scale-105 ease-in duration-300'>
+                    <FaLinkedinIn />
+                  </div>
+                </a>
+                <a href='https://github.com/DandleGarian'>
+                  <div className='rounded-full shadow-lg p-sm+ cursor-pointer hover:scale-105 ease-in duration-300'>
+                    <FaGithub />
+                  </div>
+                </a>
+                <Link href='/#contact'>
+                  <div className='rounded-full shadow-lg p-sm+ cursor-pointer hover:scale-105 ease-in duration-300'>
+                    <AiOutlineMail />
+                  </div>
+                </Link>
+                <Link href='/resume'>
+                  <div className='rounded-full shadow-lg p-sm+ cursor-pointer hover:scale-105 ease-in duration-300'>
+                    <BsFillPersonLinesFill />
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

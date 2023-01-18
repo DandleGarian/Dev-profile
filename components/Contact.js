@@ -23,28 +23,42 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <h2 className='py-2'>Dan Dulgerian</h2>
-                <p>Web Developer</p>
+                <h2 className='py-sm'>Dan Dulgerian</h2>
+                <p>Web Developer | Shopify Developer</p>
                 <p className='py-md'>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptate, impedit?
+                  Available for freelance or full-time positions. Interested in
+                  reaching out?
                 </p>
               </div>
               <div>
                 <p className='uppercase pt-lg font-semibold'>Connect with me</p>
                 <div className='flex items-center justify-between py-md'>
-                  <div className='rounded-full shadow-lg p-md+ cursor-pointer hover:scale-110 ease-in duration-300'>
-                    <FaLinkedinIn />
-                  </div>
-                  <div className='rounded-full shadow-lg p-md+ cursor-pointer hover:scale-110 ease-in duration-300'>
-                    <FaGithub />
-                  </div>
+                  <a
+                    href='https://www.linkedin.com/in/daniel-dulgerian/'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    <div className='rounded-full shadow-lg p-md+ cursor-pointer hover:scale-110 ease-in duration-300'>
+                      <FaLinkedinIn />
+                    </div>
+                  </a>
+                  <a
+                    href='https://github.com/DandleGarian'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    <div className='rounded-full shadow-lg p-md+ cursor-pointer hover:scale-110 ease-in duration-300'>
+                      <FaGithub />
+                    </div>
+                  </a>
                   <div className='rounded-full shadow-lg p-md+ cursor-pointer hover:scale-110 ease-in duration-300'>
                     <AiOutlineMail />
                   </div>
-                  <div className='rounded-full shadow-lg p-md+ cursor-pointer hover:scale-110 ease-in duration-300'>
-                    <BsFillPersonLinesFill />
-                  </div>
+                  <Link href='/resume'>
+                    <div className='rounded-full shadow-lg p-md+ cursor-pointer hover:scale-110 ease-in duration-300'>
+                      <BsFillPersonLinesFill />
+                    </div>
+                  </Link>
                 </div>
               </div>
             </div>

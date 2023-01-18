@@ -1,5 +1,8 @@
 import React from 'react'
-import projectImg from '../public/assets/project.png'
+import rgbImg from '../public/assets/rgb.png'
+import carpImg from '../public/assets/carpathian.png'
+import ebImg from '../public/assets/elizabet.png'
+import movieImg from '../public/assets/movie.png'
 import ProjectCard from './ProjectCard'
 
 const Projects = () => {
@@ -11,27 +14,27 @@ const Projects = () => {
         <div className='grid md:grid-cols-2 gap-lg'>
           <ProjectCard
             title='Guess the RGB Color Game'
-            backgroundImg={projectImg}
+            backgroundImg={rgbImg}
             description='Vanilla Javascript Project'
             projectUrl='/rgb'
           />
           <ProjectCard
-            title='Guess the RGB Color Game'
-            backgroundImg={projectImg}
-            description='Vanilla Javascript Project'
-            projectUrl='/rgb'
+            title='Carpathian Outerwear'
+            backgroundImg={carpImg}
+            description='Ecommerce Store'
+            projectUrl='/ecomm'
           />
           <ProjectCard
-            title='Guess the RGB Color Game'
-            backgroundImg={projectImg}
+            title='Movie Quiz'
+            backgroundImg={movieImg}
             description='Vanilla Javascript Project'
-            projectUrl='/rgb'
+            projectUrl='/movie'
           />
           <ProjectCard
-            title='Guess the RGB Color Game'
-            backgroundImg={projectImg}
-            description='Vanilla Javascript Project'
-            projectUrl='/rgb'
+            title='ElizaBet Store'
+            backgroundImg={ebImg}
+            description='Custom Built Shopify Theme'
+            projectUrl='/shopify'
           />
         </div>
       </div>
