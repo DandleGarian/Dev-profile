@@ -31,7 +31,7 @@ const rgb = () => {
             templating languages Javascript is pumping blood through all the
             arteries. Thus, I have focused considerable time learning the ins
             and outs of the world's leading programming language. In one of the
-            several courses I took, we made a multiple -choice quiz app. The
+            several courses I took, we made a multiple-choice quiz app. The
             original is quite boring, to be honest. For my version, I chucked
             the local JSON file of questions and answers and instead wired my
             app up to The Open Movie Database's API. This one was perfectly
