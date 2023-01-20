@@ -9,7 +9,8 @@ const resume = () => {
         <title>Dan | Resume</title>
         <meta
           name='description'
-          content='I’m a front-end web developer specializing in building (and occasionally designing) exceptional digital experiences.'
+          content="I'm a web developer and Shopify developer specializing in
+              high-quality eCommerce stores."
         />
         <link rel='icon' href='/fav.png' />
       </Head>
@@ -95,6 +96,7 @@ const resume = () => {
             <li>
               Integrate third-party applications to match clients' themes.
             </li>
+            <li>Improve performance through testing and debugging.</li>
           </ul>
         </div>
 
