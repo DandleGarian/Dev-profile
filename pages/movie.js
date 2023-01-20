@@ -42,9 +42,15 @@ const rgb = () => {
             this is a great one for movie fans with way too much useless
             knowledge -- like me!
           </p>
-          <button className='font-semibold px-lg py-sm mt-md mr-lg'>
-            Demo
-          </button>
+          <a
+            href='https://dandlegarian.github.io/quiz-app/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <button className='font-semibold px-lg py-sm mt-md mr-lg'>
+              Demo
+            </button>
+          </a>
           <a
             href='https://github.com/DandleGarian/quiz-app'
             target='_blank'

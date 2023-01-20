@@ -41,7 +41,7 @@ const rgb = () => {
             theme. Without first having worked on this project, my Shopify
             developer journey would have gotten off to a much rockier start.
           </p>
-          <button className='font-semibold px-lg py-sm mt-md mr-lg'>
+          <button className='hidden font-semibold px-lg py-sm mt-md mr-lg'>
             Demo
           </button>
           <a

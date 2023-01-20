@@ -37,7 +37,7 @@ const rgb = () => {
             locally stored JSON file. It may not be the proper way to do it, but
             it sure was a great learning experience.
           </p>
-          <button className='font-semibold px-lg py-sm mt-md mr-lg'>
+          <button className='hidden font-semibold px-lg py-sm mt-md mr-lg'>
             Demo
           </button>
           <a

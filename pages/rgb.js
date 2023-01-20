@@ -35,9 +35,15 @@ const rgb = () => {
             from inspecting JS files from pre-existing CodePens. I'm very
             pleased with the results.
           </p>
-          <button className='font-semibold px-lg py-sm mt-md mr-lg'>
-            Demo
-          </button>
+          <a
+            href='https://dandlegarian.github.io/guessing-game/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <button className='font-semibold px-lg py-sm mt-md mr-lg'>
+              Demo
+            </button>
+          </a>
           <a
             href='https://github.com/DandleGarian/guessing-game'
             target='_blank'
