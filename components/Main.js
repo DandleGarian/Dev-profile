@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import headShot from '../public/assets/main-head-shot.jpg';
 import logoDark from '../public/assets/logo-dark.png';
+import animateLogo from '../public/assets/logo-dark-slide.png';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 import { AiOutlineMail } from 'react-icons/ai';
@@ -81,13 +82,13 @@ const Main = () => {
       >
         <div className='flex h-full w-full justify-center items-center'>
           <div className='px-4'>
-            <Image src={logoDark} />
+            <Image src={animateLogo} />
           </div>
           {/* <div className='w-1/4 h-2 rounded-md mt-4 bg-background'></div> */}
           {/* <div className='w-1/4 h-2 rounded-md mb-4 bg-background'></div> */}
         </div>
       </motion.div>
-      <div className='max-w-[1240px] w-full h-full mx-auto px-md pt-20 relative grid'>
+      <div className='max-w-[1240px] w-full h-full mx-auto px-md pt-[6.2rem] relative grid sm-max:pb-md+'>
         <motion.div
           className='w-full max-h-[60%] tablet:w-3/5 tablet:max-h-[50rem] lg:w-2/4 lg:max-h-[60rem] h-full mx-auto min-h-0 col-span-full row-span-full relative'
           variants={imgVariants}

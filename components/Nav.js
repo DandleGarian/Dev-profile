@@ -68,8 +68,8 @@ const Nav = () => {
       style={{ backgroundColor: `${navBg}` }}
       className={
         shadow
-          ? 'fixed w-full h-20 shadow-xl z-[100]'
-          : 'fixed w-full h-20 z-[100]'
+          ? 'fixed w-full h-[6.2rem] shadow-xl z-[100]'
+          : 'fixed w-full h-[6.2rem] z-[100]'
       }
       variants={navVariants}
       initial='initial'
@@ -77,9 +77,11 @@ const Nav = () => {
       viewport={{ once: true }}
     >
       <div className='flex justify-between items-center w-full h-full px-8 2xl:px-16'>
-        <Link href='/'>
-          <Image src={logoLight} alt='logo' width='190' height='45' />
-        </Link>
+        <div className='p-xs'>
+          <Link href='/'>
+            <Image src={logoLight} alt='logo' width='50' height='50' />
+          </Link>
+        </div>
         <div>
           <ul style={{ color: `${linkColor}` }} className='hidden md:flex'>
             <Link href='/'>
@@ -130,7 +132,7 @@ const Nav = () => {
           <div>
             <div className='flex w-full items-center justify-between'>
               <Link href='/'>
-                <Image src={logoDark} alt='logo' width='190' height='45' />
+                <Image src={logoDark} alt='logo' width='50' height='50' />
               </Link>
               <div
                 onClick={handleNav}
