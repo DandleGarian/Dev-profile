@@ -66,7 +66,7 @@ const Contact = () => {
           {/* right */}
           <div className='col-span-3 w-full h-auto shadow-xl rounded-xl lg:p-md'>
             <div className='p-md'>
-              <form>
+              <form netlify>
                 <div className='grid md:grid-cols-2 gap-md w-full py-sm'>
                   <div className='flex flex-col'>
                     <label className='uppercase text-sm+ font-semibold py-sm'>
