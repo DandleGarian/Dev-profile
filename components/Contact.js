@@ -66,23 +66,38 @@ const Contact = () => {
           {/* right */}
           <div className='col-span-3 w-full h-auto shadow-xl rounded-xl lg:p-md'>
             <div className='p-md'>
-              <form name='contact' netlify>
+              <form
+                name='contact-form'
+                method='POST'
+                action='contact/?success=true'
+                data-netlify='true'
+              >
+                <input type='hidden' name='form-name' value='contact-form' />
                 <div className='grid md:grid-cols-2 gap-md w-full py-sm'>
                   <div className='flex flex-col'>
-                    <label className='uppercase text-sm+ font-semibold py-sm'>
+                    <label
+                      htmlFor='name'
+                      className='uppercase text-sm+ font-semibold py-sm'
+                    >
                       Name
                     </label>
                     <input
+                      id='name'
                       type='text'
                       name='name'
                       className='border-2 rounded-lg p-sm+ flex border-accent text-background'
+                      required
                     />
                   </div>
                   <div className='flex flex-col'>
-                    <label className='uppercase text-sm+ font-semibold py-sm'>
+                    <label
+                      htmlFor='phone'
+                      className='uppercase text-sm+ font-semibold py-sm'
+                    >
                       Phone Number
                     </label>
                     <input
+                      id='phone'
                       type='tel'
                       name='phone'
                       className='border-2 rounded-lg p-sm+ flex border-accent text-background'
@@ -90,10 +105,14 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className='flex flex-col py-sm'>
-                  <label className='uppercase text-sm+ font-semibold py-2'>
+                  <label
+                    htmlFor='email'
+                    className='uppercase text-sm+ font-semibold py-2'
+                  >
                     Email
                   </label>
                   <input
+                    id='email'
                     type='email'
                     name='email'
                     className='border-2 rounded-lg p-sm+ flex border-accent text-background'
@@ -101,20 +120,29 @@ const Contact = () => {
                   />
                 </div>
                 <div className='flex flex-col py-sm'>
-                  <label className='uppercase text-sm+ font-semibold py-2'>
+                  <label
+                    htmlFor='subject'
+                    className='uppercase text-sm+ font-semibold py-2'
+                  >
                     Subject
                   </label>
                   <input
+                    id='subject'
                     type='text'
                     name='subject'
                     className='border-2 rounded-lg p-sm+ flex border-accent text-background'
                   />
                 </div>
                 <div className='flex flex-col py-sm'>
-                  <label className='uppercase text-sm+ font-semibold py-2'>
+                  <label
+                    htmlFor='message'
+                    className='uppercase text-sm+ font-semibold py-2'
+                  >
                     Message
                   </label>
                   <textarea
+                    id='message'
+                    name='message'
                     className='border-2 rounded-lg p-sm+ border-accent text-background'
                     rows='10'
                     required
