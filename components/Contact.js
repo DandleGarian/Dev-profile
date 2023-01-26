@@ -66,7 +66,7 @@ const Contact = () => {
           {/* right */}
           <div className='col-span-3 w-full h-auto shadow-xl rounded-xl lg:p-md'>
             <div className='p-md'>
-              <form>
+              <form name='contact' netlify>
                 <div className='grid md:grid-cols-2 gap-md w-full py-sm'>
                   <div className='flex flex-col'>
                     <label className='uppercase text-sm+ font-semibold py-sm'>
@@ -74,7 +74,8 @@ const Contact = () => {
                     </label>
                     <input
                       type='text'
-                      className='border-2 rounded-lg p-sm+ flex border-accent'
+                      name='name'
+                      className='border-2 rounded-lg p-sm+ flex border-accent text-background'
                     />
                   </div>
                   <div className='flex flex-col'>
@@ -82,8 +83,9 @@ const Contact = () => {
                       Phone Number
                     </label>
                     <input
-                      type='text'
-                      className='border-2 rounded-lg p-sm+ flex border-accent'
+                      type='tel'
+                      name='phone'
+                      className='border-2 rounded-lg p-sm+ flex border-accent text-background'
                     />
                   </div>
                 </div>
@@ -93,7 +95,9 @@ const Contact = () => {
                   </label>
                   <input
                     type='email'
-                    className='border-2 rounded-lg p-sm+ flex border-accent'
+                    name='email'
+                    className='border-2 rounded-lg p-sm+ flex border-accent text-background'
+                    required
                   />
                 </div>
                 <div className='flex flex-col py-sm'>
@@ -102,7 +106,8 @@ const Contact = () => {
                   </label>
                   <input
                     type='text'
-                    className='border-2 rounded-lg p-sm+ flex border-accent'
+                    name='subject'
+                    className='border-2 rounded-lg p-sm+ flex border-accent text-background'
                   />
                 </div>
                 <div className='flex flex-col py-sm'>
@@ -110,11 +115,12 @@ const Contact = () => {
                     Message
                   </label>
                   <textarea
-                    className='border-2 rounded-lg p-sm+ border-accent'
+                    className='border-2 rounded-lg p-sm+ border-accent text-background'
                     rows='10'
+                    required
                   ></textarea>
                 </div>
-                <button className='mt-4 w-full p-4 font-semibold'>
+                <button type='submit' className='mt-4 w-full p-4 font-semibold'>
                   Send Message
                 </button>
               </form>
