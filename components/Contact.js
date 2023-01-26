@@ -11,7 +11,7 @@ const Contact = () => {
     <form
       name='contact-form'
       method='POST'
-      action='contact/?success=true'
+      action='/success'
       data-netlify='true'
     >
       <input type='hidden' name='form-name' value='contact-form' />
@@ -95,21 +95,21 @@ const Contact = () => {
       </button>
     </form>
   );
-  const router = useRouter;
-  const confirmationScreenVisible =
-    router.query?.success && router.query.success === 'true';
-  const formVisible = !confirmationScreenVisible;
+  // const router = useRouter;
+  // const confirmationScreenVisible =
+  //   router.query?.success && router.query.success === 'true';
+  // const formVisible = !confirmationScreenVisible;
 
-  const ConfirmationMessage = (
-    <>
-      <p>Thank you for submitting this form.</p>
-      <button
-        onClick={() => router.replace('/contact', undefined, { shallow: true })}
-      >
-        Submit Another Response
-      </button>
-    </>
-  );
+  // const ConfirmationMessage = (
+  //   <>
+  //     <p>Thank you for submitting this form.</p>
+  //     <button
+  //       onClick={() => router.replace('/contact', undefined, { shallow: true })}
+  //     >
+  //       Submit Another Response
+  //     </button>
+  //   </>
+  // );
   return (
     <div id='contact' className='w-full lg:h-screen'>
       <div className='max-w-[1240px] m-auto px-sm py-2xl w-full'>
@@ -169,9 +169,7 @@ const Contact = () => {
           </div>
           {/* right */}
           <div className='col-span-3 w-full h-auto shadow-xl rounded-xl lg:p-md'>
-            <div className='p-md'>
-              {formVisible ? ContactForm : ConfirmationMessage}
-            </div>
+            <div className='p-md'>{ContactForm}</div>
           </div>
         </div>
         <div className='flex justify-center py-xl'>
