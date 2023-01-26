@@ -24,6 +24,14 @@ const About = () => {
             teaching career had run its course. I decided it was time to spin
             this little coding hobby into a new career.
           </p>
+          <div className='md:hidden w-full h-auto m-auto shadow-xl rounded-xl flex items-center justify-center p-md hover:scale-105 ease-in duration-300 relative'>
+          <Image
+            className='object-cover md:hidden'
+            src={headShot}
+            alt='Profile photo of Daniel Dulgerian'
+            layout='fill'
+          />
+        </div>
           <p className='py-sm'>
             Over the past year, I've happily devoted significant time to
             learning web development technologies. In June of 2022, I snagged my
@@ -41,7 +49,7 @@ const About = () => {
             </p>
           </Link>
         </div>
-        <div className='w-full h-auto m-auto shadow-xl rounded-xl flex items-center justify-center p-md hover:scale-105 ease-in duration-300'>
+        <div className='hidden w-full h-auto m-auto shadow-xl rounded-xl md:flex items-center justify-center p-md hover:scale-105 ease-in duration-300'>
           <Image
             className='object-cover rounded-xl'
             src={headShot}
