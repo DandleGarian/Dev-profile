@@ -13,15 +13,15 @@ const Contact = () => {
         <h2 className='py-md'>Get in touch</h2>
         <div className='grid lg:grid-cols-5 gap-lg'>
           {/* left */}
-          <div className='col-span-3 lg:col-span-2 w-full h-full shadow-xl rounded-xl p-md'>
-            <div className='lg:p-md h-full'>
-              <div>
-                <img
-                  src='https://images.unsplash.com/photo-1615840287214-7ff58936c4cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'
-                  alt='contact'
-                  className='rounded-xl hover:scale-105 ease-in duration-300'
-                />
-              </div>
+          <div className='col-span-3 lg:col-span-2 w-full h-full shadow-xl rounded-xl p-md relative'>
+            <div className='absolute inset-0 opacity-40 w-full h-auto'>
+              <img
+                src='https://images.unsplash.com/photo-1615840287214-7ff58936c4cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'
+                alt='contact'
+                className='rounded-xl object-cover max-h-full min-w-full'
+              />
+            </div>
+            <div className='lg:p-md h-full relative z-[1]'>
               <div>
                 <h2 className='py-sm'>Dan Dulgerian</h2>
                 <p>Web Developer | Shopify Developer</p>
@@ -38,7 +38,7 @@ const Contact = () => {
                     target='_blank'
                     rel='noreferrer'
                   >
-                    <div className='rounded-full shadow-lg p-md+ cursor-pointer hover:scale-110 ease-in duration-300'>
+                    <div className='bg-accent-2 opacity-80 rounded-full shadow-lg p-md+ cursor-pointer hover:scale-110 ease-in duration-300'>
                       <FaLinkedinIn />
                     </div>
                   </a>
@@ -47,15 +47,15 @@ const Contact = () => {
                     target='_blank'
                     rel='noreferrer'
                   >
-                    <div className='rounded-full shadow-lg p-md+ cursor-pointer hover:scale-110 ease-in duration-300'>
+                    <div className='bg-accent-2 opacity-80 rounded-full shadow-lg p-md+ cursor-pointer hover:scale-110 ease-in duration-300'>
                       <FaGithub />
                     </div>
                   </a>
-                  <div className='rounded-full shadow-lg p-md+ cursor-pointer hover:scale-110 ease-in duration-300'>
+                  <div className='bg-accent-2 opacity-80 rounded-full shadow-lg p-md+ cursor-pointer hover:scale-110 ease-in duration-300'>
                     <AiOutlineMail />
                   </div>
                   <Link href='/resume'>
-                    <div className='rounded-full shadow-lg p-md+ cursor-pointer hover:scale-110 ease-in duration-300'>
+                    <div className='bg-accent-2 opacity-80 rounded-full shadow-lg p-md+ cursor-pointer hover:scale-110 ease-in duration-300'>
                       <BsFillPersonLinesFill />
                     </div>
                   </Link>
