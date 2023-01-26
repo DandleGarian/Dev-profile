@@ -115,7 +115,7 @@ const resume = () => {
           </p>
           <p className='py-xs italic'>Year 3 Teacher (Aug. 2021 – Jan. 2022)</p>
           <ul className='list-disc list-outside px-11 py-xs leading-relaxed'>
-            <li>Taught Year 3 class following British Curriculum</li>
+            <li>Taught Year 3 class following British Curriculum.</li>
             <li>
               Responsible for recording progress of students in all areas of
               learning and social development.
@@ -136,7 +136,7 @@ const resume = () => {
             Year 2 Teacher | Head of Key Stage 1 (Aug. 2019 – Jun. 2021)
           </p>
           <ul className='list-disc list-outside px-11 py-xs leading-relaxed'>
-            <li>Taught Year 2 class following British Curriculum</li>
+            <li>Taught Year 2 class following British Curriculum.</li>
             <li>
               Responsible for recording progress of students in all areas of
               learning and social development.
