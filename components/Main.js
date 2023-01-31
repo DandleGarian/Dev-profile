@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import headShot from '../public/assets/main-head-shot.jpg';
-import logoDark from '../public/assets/logo-dark.png';
 import animateLogo from '../public/assets/logo-dark-slide.png';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
