@@ -1,13 +1,15 @@
-import React from 'react';
+import { React, useRef } from 'react';
 import SkillCard from './SkillCard';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const Skills = () => {
+  // const scrollProgress = useScroll();
   return (
     <div id='skills' className='w-full lg:h-screen p-sm'>
       <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full'>
         <p className='text-xl tracking-widest uppercase text-accent'>Skills</p>
         <h2 className='py-4'>What I Can Do</h2>
-        <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-lg'>
+        <div className='perspective grid md:grid-cols-2 lg:grid-cols-4 gap-lg'>
           <SkillCard
             src={
               'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg'
